@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Ram Sundar Radhakrishnan — ML/DL engineer exploring LLMs, Supply Chain, and Video Proctoring.">
+  <title>Ram Sundar Radhakrishnan – Portfolio</title>
+<link rel="shortcut icon" href="favicon_io/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="favicon_io/android-chrome-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="favicon_io/android-chrome-512x512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png" />
+<link rel="manifest" href="favicon_io/site.webmanifest" />
+<meta name="theme-color" content="#3b82f6" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+    :root {
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --primary: #1e3a8a;
+      --accent: #3b82f6;
+      --text: #4b5563;
+      --muted: #9ca3af;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: var(--card);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .profile-header { text-align: center; }
+    .profile-header img {
+      width: 150px; 
+      height: auto;
+      border-radius: 50%;
+      border: 4px solid var(--accent);
+      transition: transform .3s;
+    }
+    .profile-header img:hover { transform: scale(1.05); }
+    .profile-header h1 {
+      margin: 1rem 0 .25rem;
+      font-size: 2.5rem;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .profile-header p { color: var(--muted); margin-bottom: .25rem; }
+    .section { margin-top: 2.5rem; }
+    .section h2 {
+      font-size: 1.75rem; font-weight: 600; color: var(--primary);
+      margin-bottom: 1rem; position: relative;
+    }
+    .section h2::after {
+      content: '';
+      display: block;
+      width: 50px; height: 4px;
+      background: var(--accent);
+      border-radius: 2px;
+      margin-top: .25rem;
+    }
+    .skills-list {
+      list-style: none;
+      display: flex; flex-wrap: wrap; gap: .75rem;
+    }
+    .skills-list li {
+      background: var(--bg);
+      color: var(--primary);
+      font-weight: 600;
+      padding: .5rem 1rem;
+      border-radius: 9999px;
+      transition: background .3s, color .3s;
+    }
+    .skills-list li:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+    .list-simple {
+      list-style: none;
+      padding-left: 0;
+    }
+    .list-simple li {
+      margin-bottom: .75rem;
+      font-size: 1rem;
+      color: var(--text);
+    }
+    .list-simple li strong { color: var(--primary); }
+    .list-simple .list-sub {
+  list-style-type: disc;
+  margin: 0.5rem 0 0 1.5rem;
+  padding: 0;
+}
+.list-simple .list-sub li {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+}
+
+    .cert-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .cert-list li {
+      margin-bottom: .75rem;
+      font-size: 1rem;
+      color: var(--text);
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    .cert-list li::before {
+      content: '🎖';
+      position: absolute;
+      left: 0;
+    }
+    .project-list { list-style: none; }
+    .project-list li {
+      background: var(--bg);
+      border-left: 4px solid var(--accent);
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      transition: background .3s, box-shadow .3s;
+    }
+    .project-list li:hover {
+      background: var(--card);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .project-list h3 {
+      margin-bottom: .5rem;
+      font-size: 1.25rem;
+    }
+    .project-list h3 a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: text-decoration .2s;
+    }
+    .project-list h3 a:hover { text-decoration: underline; }
+    .project-list p { color: var(--text); }
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+      margin-top: 1rem;
+    }
+    .social-links a {
+      padding: .5rem 1rem;
+      border: 2px solid var(--accent);
+      border-radius: 6px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      transition: background .3s, color .3s;
+    }
+    .social-links a:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+    @media (max-width: 600px) {
+      .container { margin: 1.5rem; padding: 1.5rem; }
+      .section h2 { font-size: 1.5rem; }
+      .profile-header h1 { font-size: 2rem; }
+    }
+      .resume-download {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: var(--primary);
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile-header">
+      <img src="ram-sundar.jpg" alt="Photo of Ram Sundar Radhakrishnan">
+      <h1>Ram Sundar Radhakrishnan</h1>
+      <p>Passionate Tech Enthusiast | Working on LLMs for Ethical AI</p>
+      <p>Interested in Supply Chain Management & HR Management</p>
+    </div>
+
+    <div class="section">
+      <h2>About Me</h2>
+      <p>A keen believer in Moore’s Law, I’m driven to tackle projects that push technological boundaries. I aim to bridge Machine Learning and Data Science into fields like Supply Chain Management, Logistics, and AI‑driven manufacturing.</p>
+    </div>
+
+    <div class="section">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>Machine Learning</li>
+        <li>Deep Learning</li>
+        <li>Generative AI</li>
+        <li>Python</li>
+        <li>C/C++</li>
+        <li>Linux</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Experience</h2>
+      <ul class="list-simple">
+        <li><strong>Research Intern, Student Research Internship Program, VIT Chennai</strong> • Summer 2025</li>
+        <li><strong>President, Aletheo VIT Toastmasters Club</strong> • Jan 2025–Present</li>
+        <li><strong>Club Mentor, Exordio VIT Toastmasters Club</strong> • Jan 2025–July 2025</li>
+      </ul>
+    </div>
+    <div class="section">
+        <h2>Education</h2>
+        <ul class="list-simple">
+  <li>
+    <strong>B.Tech, CSE</strong>, VIT Chennai • 2023–2027
+    <ul class="list-sub">
+      <li>CGPA: 9.08</li>
+    </ul>
+  </li>
+</ul>
+    </div>
+
+
+    <div class="section">
+      <h2>Certifications &amp; Awards</h2>
+      <ul class="cert-list">
+        <li>Intermediate Deep Learning with PyTorch, DataCamp</li>
+        <li>Introduction to Deep Learning with PyTorch, DataCamp</li>
+        <li>Machine Learning Specialization, DeepLearning.ai and Coursera</li>
+        <li>Finance Foundations, Linkedin Learning</li>
+        <li>Managing Globally, Linkedin Learning</li>
+        <li>Leadership Foundations, Linkedin Learning</li>
+        <li>Division Support Award (Toastmasters, Mar–Sep 2024)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Projects</h2>
+      <ul class="project-list">
+        <li>
+          <h3><a href="https://github.com/RamSundarRadhakrishnan/LLM-Fine-Tuning-Experiments" target="_blank">LLM Fine‑Tuning Experiments</a></h3>
+          <p>Series of experiments fine‑tuning various LLMs (Gemma3, Mistral, T5) on domain‑specific data, evaluating performance and inference speed across GPU setups.</p>
+        </li>
+        <li>
+          <h3><a href="https://github.com/RamSundarRadhakrishnan/TripletExtraction" target="_blank">TripletExtraction</a></h3>
+          <p>Automated extraction of subject–predicate–object triples from large text corpora using custom prompts and LLMs, yielding over 600k structured knowledge triples.</p>
+        </li>
+        <li>
+          <h3><a href="https://github.com/RamSundarRadhakrishnan/VideoProctoring" target="_blank">VideoProctoring</a></h3>
+          <p>End‑to‑end video proctoring solution leveraging vision‑language models to detect anomalies and generate behavior analytics for secure remote exams.</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Contact</h2>
+      <ul class="social-links">
+        <li><a href="https://www.linkedin.com/in/ram-sundar-radhakrishnan-56b522289/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/RamSundarRadhakrishnan" target="_blank">GitHub</a></li>
+      </ul>
+    </div>
+    <div class="resume-download">
+  <a href="Resume%20-%20Ram%20Sundar%20Radhakrishnan.pdf" download class="btn">Download Résumé (PDF)</a>
+</div>
+  </div>
+</body>
+</html>
